@@ -3,7 +3,6 @@ import Header from "./components/Header"
 import { glassStyle } from "./constants"
 
 function App() {
-  
   return ( 
     <div className="w-screen h-screen bg-gradient-to-tl from-pink-400 to-indigo-500">
       <div className="w-5/6 m-auto">

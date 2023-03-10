@@ -5,7 +5,7 @@ export default function LangToggler({firstButton, secondButton}) {
 
     const active = {
         fontWeight: '600',
-        fontSize: '14px',
+        fontSize: '18px',
         color: 'black'
     }
 
@@ -21,6 +21,7 @@ export default function LangToggler({firstButton, secondButton}) {
         <button 
         style={disable} 
         className='m-1'>
+          {firstButton}
         </button>
         <h1 className='-mt-1'>|</h1>
         <button 

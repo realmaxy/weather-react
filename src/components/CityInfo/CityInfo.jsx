@@ -1,5 +1,5 @@
 import React from 'react'
-import { glassStyle } from '../constants'
+import { glassStyle } from '../../constants'
 import MainInfo from './MainInfo'
 
 export default function CityInfo() {

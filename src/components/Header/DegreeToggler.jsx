@@ -1,28 +1,29 @@
 import { useDispatch } from 'react-redux'
-import { toggleDegree } from '../features/degreeToggler/degreeTogglerSlice'
+import { toggleDegree } from '../../features/degreeToggler/degreeTogglerSlice'
 import { useSelector } from 'react-redux'
 
 export default function DegreeToggler({ firstButton, secondButton}) {
 
   const dispatch = useDispatch()
+  const degreeKind = useSelector(state => state.degreeToggler.degreeKind)
 
-    const active = {
-        fontWeight: '600',
-        fontSize: '14px',
-        color: 'black'
-    }
+  const active = {
+      fontWeight: '600',
+      fontSize: '18px',
+      color: 'black'
+  }
 
-    const disable = {
-        fontWeight: '400',
-        fontSize: '14px',
-        color: '#4C4B48'
-    }
+  const disable = {
+      fontWeight: '400',
+      fontSize: '14px',
+      color: '#4C4B48'
+  }
 
 
   return (
     <div className='flex items-center'>
         <button 
-        style={disable} 
+        style={(degreeKind === firstButton)?active:disable} 
         className='m-1' 
         onClick={
           ()=>dispatch(toggleDegree(firstButton))}>
@@ -30,7 +31,7 @@ export default function DegreeToggler({ firstButton, secondButton}) {
         </button>
         <h1 className='-mt-1'>|</h1>
         <button 
-        style={disable} 
+        style={(degreeKind === secondButton)?active:disable} 
         className='m-1'
         onClick={()=>dispatch(toggleDegree(secondButton))}
         >

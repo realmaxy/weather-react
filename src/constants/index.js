@@ -18,3 +18,48 @@ export const glassStyle = {
     border: '1px solid rgba(255, 255, 255, 0.18)',
     boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)'
 }
+
+export const moreDetails = [
+    {
+        id: 'wind', 
+        EN: {
+            text: 'Wind Speed',
+            additional: 'm/s'
+        },
+        RU: {
+            text: 'Скорость ветра',
+            additional: 'м/c'
+        }
+    },
+    {
+        id: 'wind', 
+        EN: {
+            text: 'Air humidity',
+            additional: '%'
+        },
+        RU: {
+            text: 'Влажность воздуха',
+            additional: '%'
+        }
+    },{
+        id: 'wind', 
+        EN: {
+            text: 'Pressure',
+            additional: 'mm'
+        },
+        RU: {
+            text: 'Давление',
+            additional: 'мм.рт.ст.'
+        }
+    },{
+        id: 'wind', 
+        EN: {
+            text: 'Precipication probabylity',
+            additional: '%'
+        },
+        RU: {
+            text: 'Вероятность осадков',
+            additional: '%'
+        }
+    },
+]

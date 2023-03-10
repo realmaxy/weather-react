@@ -1,6 +1,7 @@
 import React from 'react'
-import { glassStyle } from '../constants'
-import TemperatureAndDate from './TemperatureAndDate/TemperatureAndDate'
+import { glassStyle } from '../../constants'
+import MoreDetails from './MoreDetails'
+import TemperatureAndDate from '../TemperatureAndDate/TemperatureAndDate'
 import WeatherStatusSunriseSunset from './WeatherStatusSunriseSunset'
 
 
@@ -9,7 +10,7 @@ export default function MainInfo() {
     <div className='flex justify-between items-center h-64 w-1/2 mt-10' style={glassStyle}>
         <WeatherStatusSunriseSunset/>
         <TemperatureAndDate/>
-        MoreDetails
+        <MoreDetails/>
     </div>
   )
 }

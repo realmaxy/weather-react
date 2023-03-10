@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {glassStyle} from '../constants'
+import {glassStyle} from '../../constants'
 import { UilSearch } from '@iconscout/react-unicons'
 
 export default function Search({placeholder}) {

@@ -1,5 +1,5 @@
 const langFormatter = (textConst, langMode) => {
-    newArray = [],
+    let newArray = []
     textConst.map(item => {
         const newItem = {
             id: item.id,
@@ -10,3 +10,5 @@ const langFormatter = (textConst, langMode) => {
     })
     return newArray
 }
+
+export default langFormatter

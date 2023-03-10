@@ -1,6 +1,5 @@
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { toggleDegree } from '../../features/degreeToggler/degreeTogglerSlice'
-import { useSelector } from 'react-redux'
 
 export default function DegreeToggler({ firstButton, secondButton}) {
 

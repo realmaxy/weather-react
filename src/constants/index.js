@@ -32,7 +32,7 @@ export const moreDetails = [
         }
     },
     {
-        id: 'wind', 
+        id: 'humidity', 
         EN: {
             text: 'Air humidity',
             additional: '%'
@@ -42,7 +42,7 @@ export const moreDetails = [
             additional: '%'
         }
     },{
-        id: 'wind', 
+        id: 'pressure', 
         EN: {
             text: 'Pressure',
             additional: 'mm'
@@ -52,7 +52,7 @@ export const moreDetails = [
             additional: 'мм.рт.ст.'
         }
     },{
-        id: 'wind', 
+        id: 'precipications', 
         EN: {
             text: 'Precipication probabylity',
             additional: '%'

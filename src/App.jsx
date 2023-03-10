@@ -1,20 +1,6 @@
 import CityInfo from "./components/CityInfo/CityInfo"
 import Header from "./components/Header/Header"
-import { glassStyle, moreDetails} from "./constants"
-
-
-
-// const langFormatter = (constantsObject, langMode) => {
-//     for(let key of constantsObject.keys) {
-//         if (key === langMode) {
-//             return constantsObject.key
-//         }
-//     }
-// }
-
-// console.log(langFormatter(moreDetails, 'RU'))
-
-console.log(moreDetails.map(item => console.log(item)))
+import { glassStyle} from "./constants" // потом убрать
 
 function App() {
   return ( 

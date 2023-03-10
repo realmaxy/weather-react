@@ -1,8 +1,10 @@
 import React from 'react'
 import GlobalSvgSelector from '../assets/GlobalSvgSelector'
-import Toggler from './Toggler'
+import Toggler from './DegreeToggler'
 import {navbarTogglers} from '../constants'
 import Search from './Search'
+import DegreeToggler from './DegreeToggler'
+import LangToggler from './LangToggler'
 
 export default function ({logo}) {
   return (
@@ -13,7 +15,8 @@ export default function ({logo}) {
         </div>
         <Search placeholder='Введите город'/>
         <div className='flex w-32 justify-between'>
-            {navbarTogglers.map(item => <Toggler key={item.id} kindOfToggle={item.id} firstButton={item.firstButton} secondButton={item.secondButton}/>)}
+          <DegreeToggler firstButton='C' secondButton='F'/>
+          <LangToggler firstButton='RU' secondButton='EN'/>
         </div>
     </div>
   )

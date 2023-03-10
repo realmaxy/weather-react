@@ -1,6 +1,8 @@
+import fetchWeather from "./api/fetch"
 import CityInfo from "./components/CityInfo"
 import Header from "./components/Header"
 import { glassStyle } from "./constants"
+
 
 function App() {
   return ( 

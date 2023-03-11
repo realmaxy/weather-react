@@ -1,5 +1,7 @@
 import monthFormatter from "./montFormatter";
 
+// Потом брать из fetch
+
 let today = new Date();
 let now = today.toLocaleString();
 let month = now.slice(3, 5)

@@ -51,7 +51,8 @@ export const moreDetails = [
             text: 'Давление',
             additional: 'мм.рт.ст.'
         }
-    },{
+    },
+    {
         id: 'precipications', 
         EN: {
             text: 'Precipication probabylity',
@@ -62,4 +63,18 @@ export const moreDetails = [
             additional: '%'
         }
     },
+]
+
+export const searchPlaceholder = [
+    {
+        RU: 'Найти город..',
+        EN: 'Find city..'
+    }
+]
+
+export const feelsLike = [
+    {
+        EN: 'Feels like',
+        RU: 'Ощущается как'
+    }
 ]

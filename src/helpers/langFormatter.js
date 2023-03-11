@@ -3,8 +3,7 @@ const langFormatter = (textConst, langMode) => {
     textConst.map(item => {
         const newItem = {
             id: item.id,
-            text: item[langMode].text,
-            additional: item[langMode].additional
+            content: item[langMode]
         }
         newArray.push(newItem)
     })

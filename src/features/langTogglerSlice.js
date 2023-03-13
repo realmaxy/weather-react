@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { moreDetails, searchPlaceholder, feelsLike } from "../../constants";
-import langFormatter from "../../helpers/langFormatter";
+import { moreDetails, searchPlaceholder, feelsLike } from "../constants";
+import langFormatter from "../helpers/langFormatter";
 
 
 const langTollerSlice = createSlice({

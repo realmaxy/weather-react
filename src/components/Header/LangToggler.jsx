@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleLang } from '../../features/langToggler/langTogglerSlice'
+import { toggleLang } from '../../features/langTogglerSlice'
 
 export default function LangToggler({firstButton, secondButton}) {
 

@@ -1,8 +1,17 @@
 import CityInfo from "./components/CityInfo/CityInfo"
 import Header from "./components/Header/Header"
 import { glassStyle } from "./constants" // потом убрать
+import UserInfo from "./helpers/userInfo"
 
 function App() {
+
+  const info = new UserInfo();
+
+  async function getInfo() {
+    console.log(await info.position())
+  }
+
+  getInfo()
 
   return ( 
     <div className="w-screen h-screen bg-gradient-to-tl from-pink-400 to-indigo-500">

@@ -8,7 +8,7 @@ function App() {
   const info = new UserInfo();
 
   async function getInfo() {
-    console.log(await info.position())
+    console.log(await info.position(), await info.ip())
   }
 
   getInfo()

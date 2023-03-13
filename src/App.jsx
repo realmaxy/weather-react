@@ -1,32 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import CityInfo from "./components/CityInfo/CityInfo"
+import Header from "./components/Header/Header"
+import { glassStyle } from "./constants" // потом убрать
+import UserInfo from "./helpers/userInfo"
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+  const info = new UserInfo();
+
+  async function getInfo() {
+    console.log(await info.position())
+  }
+
+  getInfo()
+
+  return ( 
+    <div className="w-screen h-screen bg-gradient-to-tl from-pink-400 to-indigo-500">
+      <div className="w-5/6 m-auto">
+        <Header logo='header-logo'/>
+        <CityInfo/>
+        <div className="h-44 w-full mt-10 " style ={glassStyle}></div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { moreDetails, searchPlaceholder, feelsLike } from "../constants";
 import langFormatter from "../helpers/langFormatter";
 
 
-const langTollerSlice = createSlice({
+const langTogglerSlice = createSlice({
     name: 'langToggler',
     initialState: {
         appLangNow: 'RU',
@@ -21,6 +21,6 @@ const langTollerSlice = createSlice({
     }
 })
 
-export const {toggleLang} = langTollerSlice.actions
+export const {toggleLang} = langTogglerSlice.actions
 
-export default langTollerSlice.reducer
+export default langTogglerSlice.reducer

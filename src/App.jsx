@@ -1,26 +1,26 @@
+import { useSelector } from "react-redux"
 import CityInfo from "./components/CityInfo/CityInfo"
 import Header from "./components/Header/Header"
-import { glassStyle } from "./constants" // потом убрать
-import UserInfo from "./helpers/userInfo"
+import PopupSetCity from "./components/PopUp/PopupSetCity"
+import TrackingCities from "./components/TrackingCities/TrackingCities"
 
 function App() {
 
-  const info = new UserInfo();
-
-  async function getInfo() {
-    console.log(await info.position())
-  }
-
-  getInfo()
+  const popUp = useSelector(state => state.trackingCities.popUpIsOpen)
 
   return ( 
-    <div className="w-screen h-screen bg-gradient-to-tl from-pink-400 to-indigo-500">
-      <div className="w-5/6 m-auto">
-        <Header logo='header-logo'/>
-        <CityInfo/>
-        <div className="h-44 w-full mt-10 " style ={glassStyle}></div>
+    <>
+      <div>
+        {(popUp)?(<PopupSetCity/>):null}
       </div>
-    </div>
+      <div className="w-screen h-screen bg-gradient-to-tl from-pink-400 to-indigo-500">| 
+        <div className="w-5/6 m-auto">
+          <Header logo='header-logo'/>
+          <CityInfo/>
+          <TrackingCities/>
+        </div>
+      </div>
+    </>
   )
 }
 

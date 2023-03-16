@@ -1,13 +1,16 @@
+import { useSelector } from 'react-redux'
 import Date from './Date'
 import Temperature from './Temperature'
-import giveDate from '../../helpers/date'
 
 export default function TemperatureAndDate() {
 
+  const weather = useSelector(state => state.trackingCities?.activeCity?.weather)
+  
+
   return (
     <div className='flex flex-col'>
-        <Date {...giveDate()}/>
-        <Temperature />
+        <Date {...weather?.location?.localtime}/>
+        <Temperature {...weather?.temperature}/>
     </div>
   )
 }

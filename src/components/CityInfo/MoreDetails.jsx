@@ -9,7 +9,7 @@ export default function MoreDetails() {
   return (
     <div className='flex flex-col'>
       {detailsList.map(item => 
-        <MoreDetailsItem key={item.id} text={item.content.text} addition={item.content.additional}/>
+        <MoreDetailsItem key={item.id} text={item.content.text} addition={item.content.additional} id={item.id}/>
       )}
     </div>
   )

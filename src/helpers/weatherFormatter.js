@@ -1,9 +1,11 @@
 import giveDate from "./dateFormatter"
+import { pressureFormatter } from "./precipicationFormatter"
+import { windSpeedFormatter } from "./windSpeedFormatter"
 
 export const weatherFormatter = (data) => {
     const {
         current: {
-            temp_c, temp_f, humidity, feelslike_c, feelslike_f, wind_kph: windSpeed, precip_mm: precipication, pressure_mb: pressure,
+            temp_c, temp_f, humidity, feelslike_c, feelslike_f, wind_kph: wind, precip_mm: precipications, pressure_mb: pressure,
             condition: {text: weatherStatus, icon}},
         location: {
             name: cityLocation,
@@ -13,26 +15,26 @@ export const weatherFormatter = (data) => {
 
     const weather = {
         temperature: {
-            C: {
-                temp_c,
-                feelslike_c
-            },
-            F: {
-                temp_f, 
-                feelslike_f
-            }
+            temp_c,
+            temp_f,
+            feelslike_c,
+            feelslike_f
         },
         location: {
             cityLocation,
             localtime,
         },
         humidity,
-        windSpeed,
-        precipication,
+        wind,
+        precipications,
         pressure,
+        weatherStatus,
+        icon
     }
 
     weather.location.localtime = giveDate(weather.location.localtime)
+    weather.wind = windSpeedFormatter(wind)
+    weather.pressure = pressureFormatter(pressure)
 
     return weather
 }

@@ -4,13 +4,13 @@ import Temperature from './Temperature'
 
 export default function TemperatureAndDate() {
 
-  const date = useSelector(state => state.trackingCities?.activeCity?.weather?.location?.localtime)
-  console.log(date)
+  const weather = useSelector(state => state.trackingCities?.activeCity?.weather)
+  
 
   return (
     <div className='flex flex-col'>
-        <Date />
-        <Temperature />
+        <Date {...weather?.location?.localtime}/>
+        <Temperature {...weather?.temperature}/>
     </div>
   )
 }

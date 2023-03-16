@@ -2,7 +2,7 @@ import React from 'react'
 import { glassStyle } from '../../constants'
 import MoreDetails from './MoreDetails'
 import TemperatureAndDate from '../TemperatureAndDate/TemperatureAndDate'
-import WeatherStatusSunriseSunset from './WeatherStatusSunriseSunset'
+import WeatherStatusSunriseSunset from './WeatherStatus'
 
 
 export default function MainInfo() {

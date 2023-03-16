@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import WeatherIcon from './WeatherIcon'
 
-export default function WeatherStatus({status, icon}) {
+export default function WeatherStatus() {
 
   const weather = useSelector(state => state.trackingCities?.activeCity?.weather)
 

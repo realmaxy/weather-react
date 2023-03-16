@@ -41,7 +41,8 @@ export const moreDetails = [
             text: 'Влажность воздуха',
             additional: '%'
         }
-    },{
+    },
+    {
         id: 'pressure', 
         EN: {
             text: 'Pressure',
@@ -77,4 +78,23 @@ export const feelsLike = [
         EN: 'Feels like',
         RU: 'Ощущается как'
     }
+]
+
+export const hourForecast = [
+    {
+        EN: 'Night',
+        RU: 'Ночь'
+    },
+    {
+        EN: 'Morning',
+        RU: 'Утро'
+    },
+    {
+        EN: 'Day',
+        RU: 'День'
+    },
+    {
+        EN: 'Evening',
+        RU: 'Вечер'
+    },
 ]

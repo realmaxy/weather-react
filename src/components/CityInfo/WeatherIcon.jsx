@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function WeatherIcon({icon}) {
+export default function WeatherIcon({icon, wh}) {
 
     const size = {
-        width: '80px',
-        height: '80px'
+        width: `${wh}px`,
+        height: `${wh}px`
     }
 
   return (

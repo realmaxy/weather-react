@@ -45,22 +45,29 @@ export const weatherFormatter = (data) => {
         weatherStatus,
         icon, 
         forecastday,
-        today: {
-            today0,
-            today3,
-            today6,
-            today9,
-            today12,
-            today15,
-            today18,
-            today21,
-        }
+        today: [
+            [
+                today0,
+                today3
+            ],
+            [
+                today6,
+                today9
+            ],
+            [
+                today12,
+                today15
+            ],
+            [
+                today18,
+                today21
+            ],
+        ]
     }
 
     weather.location.localtime = giveDate(weather.location.localtime)
     weather.wind = windSpeedFormatter(wind)
     weather.pressure = pressureFormatter(pressure)
-    weather.forecastday
 
     return weather
 }

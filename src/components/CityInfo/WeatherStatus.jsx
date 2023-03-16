@@ -8,7 +8,7 @@ export default function WeatherStatus() {
 
   return (
     <div>
-        <WeatherIcon icon={weather?.icon}/>
+        <WeatherIcon icon={weather?.icon} wh='80'/>
         <h1>{weather?.weatherStatus}</h1>
     </div>
   )

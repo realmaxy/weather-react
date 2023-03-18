@@ -8,7 +8,7 @@ import WeatherStatusSunriseSunset from './WeatherStatus'
 export default function MainInfo() {
   return (
     <div className='flex justify-between max-w-max m-auto items-center p-6' style={glassStyle}>
-        <WeatherStatusSunriseSunset/>
+        <WeatherStatusSunriseSunset />
         <TemperatureAndDate/>
         <MoreDetails/>
     </div>

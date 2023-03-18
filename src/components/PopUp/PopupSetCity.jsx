@@ -3,17 +3,28 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addWeather, openPopUp} from '../../features/trackingCitiesSlice'
 import fetchWeather from '../../api/fetch'
+import { isNumeric } from '../../helpers/isNuneric'
 
 export default function PopupSetCity () {
   
-  const [value, setValue] = useState('')
   const dispatch = useDispatch()
+  const [value, setValue] = useState('')
+  const [err, setErr] = useState(false)
 
   const handlerSubmit = (e) => {
     e.preventDefault()
-    fetchWeather(value).then(res => dispatch(addWeather(res)))
-    dispatch(openPopUp())
-    setValue('')
+    if(value === '') {
+      setErr(true)
+    }
+    else if(isNumeric(value)) {
+      setErr(true)
+    }
+    else if(value !== ''){
+      setErr(false)
+      fetchWeather(value).then(res => dispatch(addWeather(res)))
+      dispatch(openPopUp())
+      setValue('')
+    }
   }
   
   return(
@@ -26,8 +37,9 @@ export default function PopupSetCity () {
               value={value}
               type='text' 
               className={s.input}
-              onChange={(e)=> setValue(e.target.value)}
+              onChange={(e)=> {setValue(e.target.value)}}
               />
+              {err && <h1 className='text-xs font-medium text-red-500 mt-1'>Ошибка: введите название города</h1>}
               <button className={s.button}>Выбрать</button>
           </form>
       </div>

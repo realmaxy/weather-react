@@ -3,7 +3,7 @@ import { UilSearch } from '@iconscout/react-unicons'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 import fetchWeather from '../../api/fetch'
-import { addWeather } from '../../features/trackingCitiesSlice'
+import { setActiveCity } from '../../features/trackingCitiesSlice'
 
 export default function Search({placeholder}) {
   
@@ -12,7 +12,7 @@ export default function Search({placeholder}) {
 
   const handlerSubmit = (e) => {
     e.preventDefault()
-    fetchWeather(value).then(res => dispatch(addWeather(res)))
+    fetchWeather(value).then(res => dispatch(setActiveCity(res)))
     setValue('')
   }
 

@@ -29,6 +29,13 @@ const trackingCitiesSlice = createSlice({
            state.cities = state.cities.filter((item) => item.name !== action.payload)
            state.activeCity = state.cities[0]
         },
+        setActiveCity(state, action) {
+            const city = action.payload.location.name
+            state.activeCity = ({
+                name: city,
+                weather: weatherFormatter(action.payload)
+            })
+        },
         changeActiveCity(state, action) {
             for(let item of state.cities) {
                 if (item.name === action.payload) {
@@ -39,6 +46,6 @@ const trackingCitiesSlice = createSlice({
     },
 })
 
-export const {addNewCity, openPopUp, addWeather, deleteWeather, changeActiveCity} = trackingCitiesSlice.actions
+export const {addNewCity, openPopUp, addWeather, deleteWeather, changeActiveCity, setActiveCity} = trackingCitiesSlice.actions
 
 export default trackingCitiesSlice.reducer

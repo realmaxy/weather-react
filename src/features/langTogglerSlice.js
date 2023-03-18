@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { moreDetails, searchPlaceholder, feelsLike, hourForecast } from "../constants";
+import { moreDetails, searchPlaceholder, feelsLike, hourForecast, daysOfWeek } from "../constants";
 import langFormatter from "../helpers/langFormatter";
 
 
@@ -10,7 +10,7 @@ const langTogglerSlice = createSlice({
         moreDetails: langFormatter(moreDetails, 'RU'),
         searchPlaceholder: langFormatter(searchPlaceholder, 'RU'),
         feelsLike: langFormatter(feelsLike, 'RU'),
-        hourForecast: langFormatter(hourForecast, 'RU')
+        hourForecast: langFormatter(hourForecast, 'RU'),
     },
     reducers: {
         toggleLang (state, action) {

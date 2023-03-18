@@ -9,7 +9,7 @@ export default function HourForecast() {
   const today = useSelector(state => state.trackingCities?.activeCity?.weather?.today)
 
   return (
-   <div style={glassStyle} className='flex w-1/2 h-54 items-center mt-3 mb-3'>
+   <div style={glassStyle} className='flex max-w-max m-auto mt-3 mb-3'>
     {dayList.map((item, index) => <HourForecastItem key={index} title={item.content} forecast={today?.[index]}/>)}
    </div>
   )

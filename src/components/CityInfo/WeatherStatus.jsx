@@ -7,9 +7,8 @@ export default function WeatherStatus() {
   const weather = useSelector(state => state.trackingCities?.activeCity?.weather)
 
   return (
-    <div>
+    <div className='flex items-center flex-col'>
         <WeatherIcon icon={weather?.icon} wh='80'/>
-        <h1>{weather?.weatherStatus}</h1>
     </div>
   )
 }

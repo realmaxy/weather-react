@@ -8,7 +8,7 @@ export default function HourStatus({icon, temp_c, temp_f, time}) {
   time = time.slice(11)
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col mr-5'>
         <WeatherIcon icon={icon} wh='40'/>
         <div>{(degreeKind === 'C')?temp_c:temp_f}°</div>
         <div>{time}</div>

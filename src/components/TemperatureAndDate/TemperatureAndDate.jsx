@@ -8,7 +8,7 @@ export default function TemperatureAndDate() {
   
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col ml-10 mr-20'>
         <Date {...weather?.location?.localtime}/>
         <Temperature {...weather?.temperature}/>
     </div>

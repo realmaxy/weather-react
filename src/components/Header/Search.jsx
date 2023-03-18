@@ -1,8 +1,9 @@
 import {glassStyle} from '../../constants'
 import { UilSearch } from '@iconscout/react-unicons'
 import { useDispatch } from 'react-redux'
-import { changeActiveCity } from '../../features/trackingCitiesSlice'
 import { useState } from 'react'
+import fetchWeather from '../../api/fetch'
+import { addWeather } from '../../features/trackingCitiesSlice'
 
 export default function Search({placeholder}) {
   
@@ -11,7 +12,8 @@ export default function Search({placeholder}) {
 
   const handlerSubmit = (e) => {
     e.preventDefault()
-    dispatch(changeActiveCity(value))
+    fetchWeather(value).then(res => dispatch(addWeather(res)))
+    setValue('')
   }
 
   return (

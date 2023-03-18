@@ -98,3 +98,77 @@ export const hourForecast = [
         RU: 'Вечер'
     },
 ]
+
+export const daysOfWeek = [
+    {
+        EN: {
+            long: 'Sunday',
+            short: 'Sun.'
+        },
+        RU: {
+            long: 'Воскресенье',
+            short: 'Вс.'
+        }
+    },
+    {
+        EN: {
+            long: 'Monday',
+            short: 'Mon.'
+        },
+        RU: {
+            long: 'Понедельник',
+            short: 'Пн.'
+        }
+    },
+    {
+        EN: {
+            long: 'Tuesday',
+            short: 'Tue.'
+        },
+        RU: {
+            long: 'Вторник',
+            short: 'Вт.'
+        }
+    },
+    {
+        EN: {
+            long: 'Wednesday',
+            short: 'Wed.'
+        },
+        RU: {
+            long: 'Среда',
+            short: 'Ср.'
+        }
+    },
+    {
+        EN: {
+            long: 'Thursday',
+            short: 'Thu.'
+        },
+        RU: {
+            long: 'Четверг',
+            short: 'Чт.'
+        }
+    },
+    {
+        EN: {
+            long: 'Friday',
+            short: 'Fri.'
+        },
+        RU: {
+            long: 'Пятница',
+            short: 'Пт.'
+        }
+    },
+    {
+        EN: {
+            long: 'Saturday',
+            short: 'Sat.'
+        },
+        RU: {
+            long: 'Суббота',
+            short: 'Вс.'
+        }
+    },
+]
+

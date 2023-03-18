@@ -16,7 +16,7 @@ export default function ({logo}) {
             <h1 className='ml-3 text-2xl font-semibold'>WeatherApp</h1>
         </div>
         <Search placeholder={searchPlaceholder[0].content}/>
-        <div className='flex w-32 justify-between'>
+        <div className='flex justify-between'>
           <DegreeToggler firstButton='C' secondButton='F'/>
           <LangToggler firstButton='RU' secondButton='EN'/>
         </div>

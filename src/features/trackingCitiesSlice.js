@@ -16,7 +16,6 @@ const trackingCitiesSlice = createSlice({
         },
         addWeather(state, action) {
             const city = action.payload.location.name
-            console.log(action.payload)
             state.cities.push({
                 name: city,
                 weather: weatherFormatter(action.payload)

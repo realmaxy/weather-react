@@ -1,14 +1,13 @@
 import s from './PopupSetCity.module.css'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addNewCity, addWeather, openPopUp} from '../../features/trackingCitiesSlice'
+import { addWeather, openPopUp} from '../../features/trackingCitiesSlice'
 import fetchWeather from '../../api/fetch'
 
 export default function PopupSetCity () {
   
   const [value, setValue] = useState('')
   const dispatch = useDispatch()
-  const cities = useSelector(state => state.trackingCities.cities)
 
   const handlerSubmit = (e) => {
     e.preventDefault()

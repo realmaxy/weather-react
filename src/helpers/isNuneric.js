@@ -1,0 +1,1 @@
+export const isNumeric = (str) => !isNaN(str)

@@ -11,9 +11,9 @@ export default function TrackingCity({name}) {
   return (
     <div className='flex text-center justify-between w-full '>
         <h1 className='text-lg cursor-pointer' onClick={() => dispatch(changeActiveCity(name))}>{name}</h1>
-        <button onClick={() => dispatch(deleteWeather(name))}>
+        {citiesList.length !== 1 && <button onClick={() => dispatch(deleteWeather(name))}>
           <UilTimes color='#0C355A' size='30px'/>
-        </button>
+        </button>}
     </div>
   )
 }

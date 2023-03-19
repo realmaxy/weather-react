@@ -1,4 +1,4 @@
-import getLocalDayOfWeek from "./getLocalDayOfWeek";
+import getDayOfWeek from "./getLocalDayOfWeek";
 
 const giveDate = (date) => {
 
@@ -10,7 +10,7 @@ const giveDate = (date) => {
         month: month,
         day: day,
         time: time,
-        dayOfWeek: getLocalDayOfWeek(day)
+        dayOfWeek: getDayOfWeek(day)
     }
 }
 

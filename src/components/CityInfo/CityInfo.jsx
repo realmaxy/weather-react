@@ -11,9 +11,9 @@ export default function CityInfo() {
         <MainInfo/>
         <HourForecast/>
       </div>
-      <div className='flex justify-center'>
-        <TrackingCities/>
-        <ForecastDay/>
+      <div className='flex sm:flex-row flex-col justify-center items-center sm:items-start'>
+        <div className='order-2 sm:order-1 w-72 sm:mt-0 mt-3'><TrackingCities/></div>
+        <div className='order-1 sm:order-2 w-72 '><ForecastDay/></div>
       </div>
     </>
   )

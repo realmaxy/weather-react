@@ -13,7 +13,7 @@ export default function ({logo}) {
     <div className='flex justify-between items-center py-4'>
         <div className='flex items-center'>
             <GlobalSvgSelector id={logo}/>
-            <h1 className='ml-3 text-2xl font-semibold'>WeatherApp</h1>
+            <h1 className='ml-3 text-2xl font-semibold md:block hidden'>WeatherApp</h1>
         </div>
         <Search placeholder={searchPlaceholder[0].content}/>
         <div className='flex justify-between'>

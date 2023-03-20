@@ -8,9 +8,13 @@ export default function HourForecast() {
   const dayList = useSelector(state => state.langToggler.hourForecast) 
   const today = useSelector(state => state.trackingCities?.activeCity?.weather?.today)
 
+  const firstBlock = [dayList[0], dayList[1]]
+  const secondBlock = [dayList[2], dayList[3]]
+
   return (
-   <div style={glassStyle} className='flex max-w-max m-auto mt-3 mb-3'>
-    {dayList.map((item, index) => <HourForecastItem key={index} title={item.content} forecast={today?.[index]}/>)}
+   <div style={glassStyle} className='max-w-max m-auto mt-3 mb-3 flex sm:flex-row flex-col'>
+      <div className='flex'>{firstBlock.map((item, index) => <HourForecastItem key={index} index={index}title={item.content} forecast={today?.[index]}/>)}</div>
+      <div className='flex'>{secondBlock.map((item, index) => <HourForecastItem key={index} index={index}title={item.content} forecast={today?.[index]}/>)}</div>
    </div>
   )
 }

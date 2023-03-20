@@ -9,9 +9,10 @@ export default function TrackingCity({name}) {
   const citiesList = useSelector(state => state.trackingCities?.cities) 
 
   return (
-    <div className='flex text-center justify-between w-full '>
+    <div className='flex  justify-center w-full '>
         <h1 className='text-lg cursor-pointer' onClick={() => dispatch(changeActiveCity(name))}>{name}</h1>
-        {citiesList.length !== 1 && <button onClick={() => dispatch(deleteWeather(name))}>
+        {citiesList.length !== 1 && 
+        <button className='ml-auto' onClick={() => dispatch(deleteWeather(name))}>
           <UilTimes color='#0C355A' size='30px'/>
         </button>}
     </div>

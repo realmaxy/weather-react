@@ -11,10 +11,12 @@ export default function HourForecast() {
   const firstBlock = [dayList[0], dayList[1]]
   const secondBlock = [dayList[2], dayList[3]]
 
+  console.log(firstBlock, secondBlock);
+
   return (
    <div style={glassStyle} className='sm:w-max w-72 m-auto mt-3 mb-3 flex sm:flex-row flex-col'>
       <div className='flex'>{firstBlock.map((item, index) => <HourForecastItem key={index} index={index}title={item.content} forecast={today?.[index]}/>)}</div>
-      <div className='flex'>{secondBlock.map((item, index) => <HourForecastItem key={index} index={index}title={item.content} forecast={today?.[index]}/>)}</div>
+      <div className='flex'>{secondBlock.map((item, index) => <HourForecastItem key={index} index={index}title={item.content} forecast={today?.[index + 2]}/>)}</div>
    </div>
   )
 }

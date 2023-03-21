@@ -10,7 +10,7 @@ export default function TrackingCities() {
   const dispatch = useDispatch()
   
   return (
-    <div style={glassStyle} className='flex flex-col  p-4 mr-3 '>
+    <div style={glassStyle} className='flex flex-col sm:w-auto w-72 p-4 mr-3 '>
         {CitiesList.map(item => <TrackingCity key={item.name} name={item.name}/>)}
         <button onClick={() => dispatch(openPopUp())} className='mt-3 bg-blue-700 hover:bg-blue-900 text-white py-1 px-3 rounded' >Добавить город</button>
     </div>

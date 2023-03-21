@@ -7,7 +7,7 @@ import MainInfo from './MainInfo'
 export default function CityInfo() {
   return (
     <>
-      <div className=' flex flex-col' >
+      <div className=' flex flex-col mt-7' >
         <MainInfo/>
         <HourForecast/>
       </div>

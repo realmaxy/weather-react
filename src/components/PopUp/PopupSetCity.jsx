@@ -7,11 +7,18 @@ import { isNumeric } from '../../helpers/isNuneric'
 
 export default function PopupSetCity () {
   
+  const citiesList = useSelector(state => state.trackingCities.cities)
   const dispatch = useDispatch()
   const [value, setValue] = useState('')
   const [err, setErr] = useState(false)
 
   const handlerSubmit = (e) => {
+    for(let city of citiesList) {
+      if (city.name === value) {
+        dispatch(openPopUp())
+        return
+      }
+    }
     e.preventDefault()
     if(value === '') {
       setErr(true)

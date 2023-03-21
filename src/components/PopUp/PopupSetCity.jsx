@@ -33,21 +33,23 @@ export default function PopupSetCity () {
       setValue('')
     }
   }
+
+  const langNow = useSelector(state=> state.langToggler.appLangNow)
   
   return(
     <>
       <div className='w-screen h-screen bg-gradient-to-tl from-pink-400 to-indigo-500 absolute z-30'/>
       <div className={s.popup}>
           <form className={s.form} onSubmit={handlerSubmit}>
-              <h1 className={s.title}>Введите свой город</h1>
+              <h1 className={s.title}>{(langNow === 'RU')?'Введите свой город':'Enter your city'}</h1>
               <input 
               value={value}
               type='text' 
               className={s.input}
               onChange={(e)=> {setValue(e.target.value)}}
               />
-              {err && <h1 className='text-xs font-medium text-red-500 mt-1'>Ошибка: введите название города</h1>}
-              <button className={s.button}>Выбрать</button>
+              {err && <h1 className='text-xs font-medium text-red-500 mt-1'>{(langNow === 'RU')?'Ошибка: введите название города':'Error: enter city name'}</h1>}
+              <button className={s.button}>{(langNow === 'RU')?'Ввести':'Enter'}</button>
           </form>
       </div>
     </>

@@ -9,13 +9,21 @@ function App() {
 
   return ( 
     <div>
-      <div>
-        {(popUp)?(<PopupSetCity/>):null}
-      </div>
-      <div className="w-5/6 m-auto flex flex-col justify-center">
-        <Header logo='header-logo'/>
-        <CityInfo/>
-      </div>
+      {
+        (popUp)?
+        (
+        <div>
+          {(popUp)?(<PopupSetCity/>):null}
+        </div>
+        )
+        :
+        (
+        <div className="w-5/6 m-auto flex flex-col justify-center pb-5">
+          <Header logo='header-logo'/>
+          <CityInfo/>
+        </div>
+        )
+      }
     </div>
   )
 }

@@ -10,8 +10,6 @@ export default function ForecastCard({date, day}) {
   const langNow = useSelector(state => state.langToggler.appLangNow)
   const formatDate = giveDate(date)
 
-  console.log(formatDate)
-
   return (
     <div className='p-2 flex flex-col items-center'>
       <div className='text-lg font-medium'>{(langNow === 'RU')?formatDate?.dayOfWeek?.RU.long:formatDate?.dayOfWeek?.EN.long}</div>
